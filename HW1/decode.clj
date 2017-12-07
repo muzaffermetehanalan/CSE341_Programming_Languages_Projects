@@ -301,20 +301,3 @@
 		))
 ;; test code...
 (test_on_test_data)
-
-
-
-
-( defn lexer [filename]
-		(def e (slurp filename))
-		(def a "(")
-		(def b ")")
-		(def c " ( ")
-		(def d " ) ")
-		(def e (clojure.string/replace e a  c))
-		(def e (clojure.string/replace e b  d))
-		(def e(clojure.string/split e  #"\s+"))
-		(def e (subvec e 1))
-		(println e)
-
-		)
